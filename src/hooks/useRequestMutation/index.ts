@@ -1,3 +1,12 @@
-import useRequestMutation from "./useRequestMutation";
+export { default } from './useRequestMutation';
 
-export default useRequestMutation;
+export type {
+  IUseRequestMutationConfig,
+  IUseRequestMutationGroupResult,
+  IUseRequestMutationOptions,
+  IUseRequestMutationResult,
+  IUseRequestMutationOverview,
+  IUseRequestMutationResultRecord,
+  MutationOptionRecord,
+  RequestLoadingMode,
+} from './types';

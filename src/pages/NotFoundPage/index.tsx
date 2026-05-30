@@ -11,13 +11,11 @@ const { Paragraph } = Typography;
 const NotFoundPage: React.FC = () => {
   const navigate = useNavigate();
   const router = useRouter();
-
   // 重试：刷新当前页面
   const handleRetry = (): void => {
     window.location.reload();
   };
 
-  // 返回上一页
   const handleGoBack = (): void => {
     if (window.history.length > 1) {
       router.history.back();

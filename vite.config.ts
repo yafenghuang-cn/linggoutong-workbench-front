@@ -36,7 +36,16 @@ export default defineConfig(({ mode }) => {
       host: "0.0.0.0",
       strictPort: false,
       cors: true,
-      proxy: {},
+      proxy: {
+        [`/${env.VITE_APP_BASE_API || "api"}`]: {
+          target: env.VITE_API_BASE_URL,
+          changeOrigin: true,
+          rewrite: (path) => {
+            const apiPrefix = env.VITE_APP_BASE_API || "api";
+            return path.replace(new RegExp(`^/${apiPrefix}`), "");
+          },
+        },
+      },
     },
     resolve: {
       alias: {
