@@ -13,21 +13,6 @@ interface PerformanceProviderProps {
   enableLog?: boolean;
 }
 
-/**
- * 性能监控 Provider
- *
- * 包裹在应用根组件外层，自动追踪：
- *  - 首次加载性能（FCP / LCP / CLS / TTFB 等）
- *  - 每次路由切换的性能指标
- *  - React 组件渲染耗时（通过 Profiler）
- *
- * 用法（在 main.tsx 中）：
- * ```tsx
- * <PerformanceProvider router={router}>
- *   <RouterProvider router={router} />
- * </PerformanceProvider>
- * ```
- */
 export function PerformanceProvider({ children, router, onReport, enableLog }: PerformanceProviderProps) {
   // 通过 router.history 订阅当前路径（无需 Router Context）
   const [currentPath, setCurrentPath] = useState(() => router.history.location.pathname);

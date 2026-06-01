@@ -14,7 +14,6 @@ const instance = axios.create({
   baseURL: `/${apiPrefix}`,
 });
 
-// ─── 请求拦截器 ──────────────────────────────────────
 instance.interceptors.request.use(
   (config) => {
     const reqOpts = config as unknown as RequestOptions;
@@ -34,7 +33,6 @@ instance.interceptors.request.use(
   (error) => Promise.reject(error),
 );
 
-// ─── 响应拦截器 ──────────────────────────────────────
 instance.interceptors.response.use(
   (response) => {
     const reqOpts = response.config as unknown as RequestOptions;

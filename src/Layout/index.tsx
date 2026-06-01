@@ -4,7 +4,7 @@ import classNames from "classnames/bind";
 import { Layout } from "antd";
 import Sidebar from "./Sidebar";
 import useAppLayouts from "./hooks/useAppLayouts";
-import styles from "./index.module.scss";
+import styles from "@/styles/appLayout.module.scss";
 const { Content } = Layout;
 const cx = classNames.bind(styles);
 
