@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from "react";
-import { createRootRoute, createRoute, createRouter, Outlet } from "@tanstack/react-router";
+import { createRootRoute, createRoute, createRouter } from "@tanstack/react-router";
+import RootLayout from "@/Layout";
 
 const NotFoundPage = lazy(() => import("@/pages/NotFoundPage"));
 const Home = lazy(() => import("@/pages/Home"));
@@ -23,12 +24,6 @@ const rootRoute = createRootRoute({
   pendingComponent: RoutePendingPage,
 });
 
-const RootLayout = () => (
-  <div>
-    <Outlet />
-  </div>
-);
-
 const appLayoutRoute = createRoute({
   getParentRoute: () => rootRoute,
   id: "lingxi-workbench-front",
@@ -43,40 +38,32 @@ const homeRoute = createRoute({
   path: "/",
   component: Home,
   getParentRoute: () => appLayoutRoute,
-  // preload: true,
-  // caseSensitive: true,
-  // beforeLoad: () => {},
-  // validateSearch: () => {},
+  preload: true,
+  caseSensitive: true,
 });
 
 const loginRoute = createRoute({
   path: "/login",
   component: Login,
   getParentRoute: () => appLayoutRoute,
-  // preload: true,
-  // caseSensitive: true,
-  // beforeLoad: () => {},
-  // validateSearch: () => {},
+  preload: true,
+  caseSensitive: true,
 });
 
 const RegisterRoute = createRoute({
   path: "/register",
   component: Register,
   getParentRoute: () => appLayoutRoute,
-  // preload: true,
-  // caseSensitive: true,
-  // beforeLoad: () => {},
-  // validateSearch: () => {},
+  preload: true,
+  caseSensitive: true,
 });
 
 const mineRoute = createRoute({
   path: "/mine",
   component: Mine,
   getParentRoute: () => appLayoutRoute,
-  // preload: true,
-  // caseSensitive: true,
-  // beforeLoad: () => {},
-  // validateSearch: () => {},
+  preload: true,
+  caseSensitive: true,
 });
 
 const routeTree = rootRoute.addChildren([

@@ -1,0 +1,137 @@
+.sider {
+  height: 100%;
+  box-shadow: 2px 0 8px 0 rgb(29 35 41 / 0.05);
+
+  :global(.ant-layout-sider-children) {
+    height: 100%;
+  }
+}
+
+.siderInner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.siderLogo {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  padding: 0 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+  gap: 12px;
+  border-bottom: 1px solid rgb(255 255 255 / 0.08);
+}
+
+.siderLogoCollapsed {
+  justify-content: center;
+  padding: 0;
+}
+
+.siderLogoMark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: #1677ff;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.siderLogoTitle {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.siderMenuWrap {
+  flex: 1;
+  overflow: hidden auto;
+}
+
+.siderMenu {
+  border-inline-end: none !important;
+}
+
+.siderFooter {
+  flex-shrink: 0;
+  padding: 8px;
+  border-top: 1px solid rgb(255 255 255 / 0.08);
+}
+
+.siderFooterCollapsed {
+  padding: 8px 12px;
+}
+
+.siderUser {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+  margin-bottom: 4px;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background: rgb(255 255 255 / 0.08);
+  }
+}
+
+.siderUserCollapsed {
+  justify-content: center;
+  padding: 8px 0;
+  margin-bottom: 8px;
+}
+
+.siderUserMeta {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.siderUserName {
+  display: block;
+  color: rgb(255 255 255 / 0.88) !important;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.siderUserRole {
+  display: block;
+  color: rgb(255 255 255 / 0.45) !important;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.siderUserSetting {
+  flex-shrink: 0;
+  color: rgb(255 255 255 / 0.45);
+  font-size: 14px;
+}
+
+.siderCollapseBtn {
+  color: rgb(255 255 255 / 0.65) !important;
+  height: 40px;
+
+  &:hover {
+    color: #fff !important;
+    background: rgb(255 255 255 / 0.08) !important;
+  }
+
+  :global(.anticon) {
+    font-size: 16px;
+  }
+}

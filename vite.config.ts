@@ -16,7 +16,6 @@ const lightningCssTargets: Record<string, number> = {
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), "");
-  console.log(env, "env");
 
   return {
     plugins: [
